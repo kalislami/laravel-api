@@ -1,0 +1,124 @@
+### Register User API
+POST http://localhost:8000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "kamal",
+    "password": "rahasia",
+    "name": "M Kamaluddien A"
+}
+
+### Login User API
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "kamal",
+    "password": "rahasia"
+}
+
+### Get Current User API
+GET http://localhost:8000/api/users/current
+Accept: application/json
+Authorization: e25f8609-6bc9-4087-9f6a-2138098140d6
+
+### Update Current User API
+PATCH http://localhost:8000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: e25f8609-6bc9-4087-9f6a-2138098140d6
+
+{
+    "name" : "M Kamaluddien"
+}
+
+### Logout User API
+DELETE http://localhost:8000/api/users/logout
+Accept: application/json
+Authorization: e25f8609-6bc9-4087-9f6a-2138098140d6
+
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: c8eb14b9-4fe2-499f-9534-cf58972c2899
+
+{
+    "first_name" : "Nufail",
+    "last_name" : "Labib",
+    "email" : "labib@testmail.com",
+    "phone" : "0881223344"
+}
+
+### GEt Contact API #249
+GET http://localhost:8000/api/contacts/249
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Update Contact API #249
+PUT http://localhost:8000/api/contacts/249
+Accept: application/json
+Content-Type: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+{
+    "first_name" : "Misyal",
+    "last_name" : "Khawarizmi",
+    "email" : "misyal@testmail.com",
+    "phone" : "0811220044"
+}
+
+### Delete Contact API #249
+DELETE http://localhost:8000/api/contacts/249
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Search Contact API
+GET http://localhost:8000/api/contacts?email=labib
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Create Address API #250
+POST http://localhost:8000/api/contacts/250/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+{
+    "street": "Jl Raya Bogor",
+    "city" : "Bogor",
+    "province": "Jawa Barat",
+    "country": "indonesia",
+    "postal_code": "16640"
+}
+
+### Get Address API #25
+GET http://localhost:8000/api/contacts/250/addresses/25
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Update Address API #25
+PUT http://localhost:8000/api/contacts/250/addresses/25
+Accept: application/json
+Content-Type: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+{
+    "street": "Jl Raya Parung",
+    "city" : "Bogor",
+    "province": "Jawa Barat",
+    "country": "indonesia",
+    "postal_code": "16630"
+}
+
+### Remove Address API #24
+DELETE http://localhost:8000/api/contacts/250/addresses/24
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### List Address API
+GET http://localhost:8000/api/contacts/250/addresses
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
